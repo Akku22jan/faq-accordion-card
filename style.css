@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(0,hsl(273, 75%, 66%),100%,hsl(240, 73%, 65%));
+}
+
+main{
+    background-color: white;
+    margin:40% 7% 15%;
+    padding: 10% 5% 15%;
+    border-radius:20px;
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position:center top;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+h1{
+    text-align: center;
+    margin: 35% auto 5%;
+    color: hsl(238, 29%, 16%);
+}
+
+picture{
+    position:absolute;
+    transform:translate(0,-73%);
+}
+.faqs-container{
+    display: flex;
+    flex-flow:column wrap;
+}
+
+.faq-box{
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
+    border-bottom: 2px solid hsl(240, 5%, 91%);
+    column-gap: 5%;
+    padding: 5% 0;
+}
+
+.question{
+    flex-basis: 90%;
+    font-size: 14px;
+    color: hsl(237, 12%, 33%);
+    font-weight: 400;
+}
+
+.hover-question{
+    color: hsl(14, 88%, 65%);
+    flex-basis: 90%;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.active-question{
+    color:hsl(238, 29%, 16%);
+    font-weight: 700;
+    flex-basis: 90%;
+    font-size: 14px;
+    margin-top: 3%;
+}
+
+.faq-box img{
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.hover-image{
+    cursor: pointer;
+}
+
+.active-image{
+    transform: rotate(180deg);
+}
+
+.answer{
+    display: none;
+}
+
+.active-answer{
+    margin: 5% 0;
+    display: auto;
+    flex-basis: 90%;
+    color: hsl(240, 6%, 50%);
+    font-size: 12px;
+}
+
+.box-desktop-img{
+    display: none;
+}
+
+@media screen and (min-width:800px) {
+    main{
+        display: flex;
+        flex-flow:row nowrap;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-position: -600px -300px;
+        background-size: cover;
+        margin:10% 16%;
+        padding:5% 7%;
+        column-gap: 5%;
+        z-index:100;
+    }
+
+    main > div{
+        flex-basis: 50%;
+        /* z-index:-2; */
+    }
+
+    picture{
+        position: absolute;
+        transform: translate(-40%,0);
+        clip-path: inset(0 0 0 87px);
+        /* z-index: -1; */
+    }
+
+    h1{
+        margin: 0 0 5%;
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    .faq-box{
+        padding: 2% 0;
+        align-items: center;
+    }
+
+    .box-desktop-img{
+        display: block;
+        position: absolute;
+        transform: translate(-120%,74%);
+        z-index: 5;
+    }
+}
+
+
+
